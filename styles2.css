@@ -66,7 +66,7 @@
     height: 500px;
     float: left;
     border-radius: 15px;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     text-align: center;
 }
 #esquerda a {
@@ -80,7 +80,7 @@
     height: 500px;
     float: right;
     border-radius: 15px;
-    background-color: lightgray;
+   /* background-color: lightgray;*/
     text-align: center;
 }
 #direita a {
@@ -104,4 +104,22 @@
     font-size: 20px;
     line-height: 50px;
     margin-left: 20px;
+}
+.input{
+    width: 100%;
+    height: 30px;
+}
+.mensagem{
+    width: 100%;
+    height: 100px;
+}
+.botão{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: bisque;
 }
