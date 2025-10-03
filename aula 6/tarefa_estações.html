@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Carro <img src="Verão.jpg" id="estações" width="200" height="200" />
+   
+   <form>
+    <input type="button" value="Verão" onclick="Verão()">
+    <input type="button" value="Inverno" onclick="Inverno()">    
+    <input type="button" value="Outono" onclick="Outono()">   
+    <input type="button" value="Primavera" onclick="Primavera()">   
+   </form>
+   <script>
+    function Verão(){
+         document.getElementById('estações').src ='Verão.jpg';
+    }
+    function Inverno(){
+         document.getElementById('estações').src ='Inverno.jpg'; 
+    }
+    function Outono(){
+         document.getElementById('estações').src ='Outono.jpg'; 
+    }
+    function Primavera(){
+         document.getElementById('estações').src ='Primavera.jpg'; 
+    }
+   </script>
+</body>
+</html>

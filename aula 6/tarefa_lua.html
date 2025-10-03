@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Carro <img src="Cheia.jpg" id="fases" width="200" height="200" />
+   
+   <form>
+    <input type="button" value="Cheia" onclick="Cheia()">
+    <input type="button" value="Nova" onclick="Nova()">    
+    <input type="button" value="Crescente" onclick="Crescente()">   
+    <input type="button" value="Minguante" onclick="Minguante()">   
+   </form>
+   <script>
+    function Cheia(){
+         document.getElementById('fases').src ='Cheia.jpg';
+    }
+    function Nova(){
+         document.getElementById('fases').src ='Nova.jpg'; 
+    }
+    function Crescente(){
+         document.getElementById('fases').src ='Crescente.jpg'; 
+    }
+    function Minguante(){
+         document.getElementById('fases').src ='Minguante.jpg'; 
+    }
+   </script>
+</body>
+</html>

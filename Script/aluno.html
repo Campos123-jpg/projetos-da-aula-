@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PortalDoAluno</title>
+</head>
+<body>
+    <script>
+        function imprimirVariaveis() {
+            var nomeAluno = document.getElementById("nomeAluno").value;
+            var serie = document.getElementById("serie").value;
+            var turnoEscolarManha = document.getElementById("turnoEscolarManha").checked;
+            var turnoEscolarTarde = document.getElementById("turnoEscolarTarde").checked;
+            var turnoEscolarNoite = document.getElementById("turnoEscolarNoite").checked;
+
+            if (turnoEscolarManha) {
+                turnoEscolarManha = "Manhã";
+            } else {
+                turnoEscolarManha = "";
+            }
+            if (turnoEscolarTarde) {
+                turnoEscolarTarde = "Tarde";
+            } else {
+                turnoEscolarTarde = "";
+            }
+            if (turnoEscolarNoite) {
+                turnoEscolarNoite = "Noite";
+            } else {
+                turnoEscolarNoite = "";
+            }
+            alert(nomeAluno + " " + serie + " " + turnoEscolarManha + " " + turnoEscolarTarde + " " + turnoEscolarNoite);
+        }
+    </script>
+    <h1>Cadastro de Alunos</h1>
+    <form>
+        Aluno: <input type="text" id="nomeAluno"><br>
+        <hr>
+        Série: <select id="serie">
+            <option value="5° ano">5° ano</option>
+            <option value="6° ano">6° ano</option>
+            <option value="7° ano">7° ano</option>
+            <option value="8° ano">8° ano</option>
+            <option value="9° ano">9° ano</option>
+            <option value="1° ano Ensino Médio">1° ano Ensino Médio</option>
+            <option value="2° ano Ensino Médio">2° ano Ensino Médio</option>
+            <option value="3° ano Ensino Médio">3° ano Ensino Médio</option>
+        </select><br>
+        <hr>
+        Turno escolar: <br>
+        <input type="checkbox" id="turnoEscolarManha">Manhã<br>
+        <input type="checkbox" id="turnoEscolarTarde">Tarde<br>
+        <input type="checkbox" id="turnoEscolarNoite">Noite<br>
+        <hr>
+        <input type="submit" onclick="imprimirVariaveis()" value="Cadastrar">
+        <input type="reset" value="Limpar valores">
+</body>
+</html>

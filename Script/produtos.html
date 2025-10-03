@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CentralDosProdutos</title>
+</head>
+<body>
+    <script>
+        function imprimirVariaveis() {
+            var nomeProduto = document.getElementById("nomeProduto").value;
+            var categoria = document.getElementById("categoria").value;
+            var emEstoque = document.getElementById("emEstoque").checked;
+            var emEstoqueNao = document.getElementById("emEstoqueNao").checked;
+ 
+            if (emEstoque) {
+                emEstoque = "Em estoque";
+            } else {
+                emEstoque = " ";
+            }
+            if (emEstoqueNao) {
+                emEstoqueNao = "Fora de estoque";
+            } else {
+                emEstoqueNao = " ";
+            }
+            alert(nomeProduto + " " + categoria + " " + emEstoque + " " + emEstoqueNao);
+        }
+    </script>
+        <a href="index.html">Home</a>
+                <a href="aluno.html">Alunos</a>
+                <a href="filme.html">Filmes</a>
+    <h1>Cadastro de Produtos</h1>
+    <form>
+        Nome do Produto: <input type="text" id="nomeProduto"><br>
+        <hr>
+        Categoria: <select id="categoria">
+            <option value="eletronicos">Informática/Eletrônica</option>
+            <option value="roupas">Hardwares</option>
+            <option value="alimentos">Softwares</option>
+            <option value="moveis">Periféricos</option>
+        </select><br>
+        <hr>
+        Em estoque? <br><input type="checkbox" id="emEstoque">Sim<br>
+        <input type="checkbox" id="emEstoqueNao">Não<br>
+        <hr>
+        <input type="submit" onclick="imprimirVariaveis()" value="Cadastrar">
+        <input type="reset" value="Limpar valores">
+</body>
+</html>

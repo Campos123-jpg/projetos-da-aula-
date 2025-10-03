@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CasaDosFilmes</title>
+</head>
+<body>
+    <script>
+        function imprimirVariaveis() {
+            var nomeFilme = document.getElementById("nomeFilme").value;
+            var categoria = document.getElementById("categoria").value;
+            var jaAssistido = document.getElementById("jaAssistido").checked;
+            var jaAssistidoNao = document.getElementById("jaAssistidoNao").checked;
+
+            if (jaAssistido) {
+                jaAssistido = "Assistido";
+            } else {
+                jaAssistido = " ";
+            }
+            if (jaAssistidoNao) {
+                jaAssistidoNao = "Não assistido";
+            } else {
+                jaAssistidoNao = " ";
+            }
+            alert(nomeFilme + " " + categoria + " " + jaAssistido + " " + jaAssistidoNao);
+        }
+    </script>
+    <h1>Cadastro de Filmes</h1>
+    <form>
+        Nome do Filme: <input type="text" id="nomeFilme"><br>
+        <hr>
+        Categoria: <select id="categoria">
+            <option value="Acao">Ação</option>
+            <option value="Comedia">Comédia</option>
+            <option value="Drama">Drama</option>
+            <option value="Terror">Terror</option>
+            <option value="Ficcao">Ficção Científica</option>
+            <option value="Romance">Romance</option>
+            <option value="Documentario">Documentário</option>
+            <option value="Animacao">Animação</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Suspense">Suspense</option>
+        </select><br>
+        <hr>
+        Já assistido? <br><input type="checkbox" id="jaAssistido">Sim<br>
+        <input type="checkbox" id="jaAssistidoNao">Não<br>
+        <hr>
+        <input type="submit" onclick="imprimirVariaveis()" value="Cadastrar">
+        <input type="reset" value="Limpar valores">
+</body>
+</html>
