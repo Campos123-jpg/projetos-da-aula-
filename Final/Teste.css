@@ -1,0 +1,110 @@
+/* Reset básico e tipografia */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+}
+
+/* 1. Estilização da Seção Principal */
+.localizacao-jah {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Cores e gradiente baseados na sua imagem original */
+    background-color: #4B0082; 
+    background-image: linear-gradient(to right, #6A5ACD 20%, #4B0082 50%); 
+    color: white;
+    padding: 50px 20px;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 2. Estilização dos Elementos de Texto e Botão */
+.conteudo-texto {
+    max-width: 500px;
+    text-align: left;
+    margin-left: 50px;
+    z-index: 2; 
+}
+
+.conteudo-texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.1em;
+}
+
+.conteudo-texto p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+/* Estilo do botão Localizar (agora um link estilizado) */
+.botao-localizar {
+    background-color: white;
+    color: #4B0082;
+    border: none;
+    border-radius: 20px; 
+    padding: 10px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    
+    /* Configurações para que o link pareça um botão */
+    display: inline-flex;
+    align-items: center; 
+    text-decoration: none; 
+    justify-content: center;
+}
+
+.botao-localizar:hover {
+    background-color: #f0f0f0;
+}
+
+.botao-localizar i {
+    margin-left: 10px;
+}
+
+/* 3. Estilização da Ilustração (Nova Imagem) */
+.ilustracao {
+    z-index: 1;
+    position: relative;
+    transform: rotate(-10deg); /* Inclinação suave da imagem original */
+    margin-right: 50px;
+}
+
+.imagem-mapa { 
+    width: 200px; /* Tamanho da imagem no desktop. Ajuste se precisar. */
+    height: auto; 
+    display: block;
+}
+
+
+/* 4. Responsividade (Layout para Telas Menores) */
+@media (max-width: 768px) {
+    .localizacao-jah {
+        flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
+        text-align: center;
+        padding: 40px 10px;
+    }
+
+    .ilustracao {
+        margin: 0 auto 30px auto; 
+        transform: rotate(0deg); /* Remove a inclinação no mobile para facilitar a visualização */
+    }
+
+    .conteudo-texto {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .conteudo-texto h1 {
+        font-size: 2em;
+    }
+    
+    .imagem-mapa { 
+        width: 150px; /* Imagem menor no mobile */
+    }
+}
